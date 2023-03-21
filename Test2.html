@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Header and Owl Carousel Example</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <style>
+    /* Style for sticky header */
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      background-color: #ffffff;
+      box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    /* Style for owl carousel */
+    .owl-carousel {
+      position: relative;
+    }
+
+    .owl-carousel .owl-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+    }
+
+    .owl-carousel .owl-prev,
+    .owl-carousel .owl-next {
+      position: absolute;
+      top: 0;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: #ffffff;
+      background-color: #000000;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background-color 0.2s ease;
+    }
+
+    .owl-carousel .owl-prev:hover,
+    .owl-carousel .owl-next:hover {
+      background-color: #555555;
+    }
+
+    .owl-carousel .owl-prev {
+      left: 0;
+    }
+
+    .owl-carousel .owl-next {
+      right: 0;
+    }
+
+    .owl-carousel .owl-dots {
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .owl-carousel .owl-dot {
+      background-color: #555555;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      margin: 0 0.5rem;
+      transition: background-color 0.2s ease;
+    }
+
+    .owl-carousel .owl-dot.active {
+      background-color: #000000;
+    }
+
+    .owl-carousel .item {
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .owl-carousel .item .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .owl-carousel .item h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .owl-carousel .item p {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header class="sticky-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Sticky Header Example</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="owl-carousel owl-theme">
+    <div class="item" style="background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8MTkyMHgxMDgwfGVufDB8fDB8fA%3D%3D&w=1000&q=80');">
+      <div class="overlay"></div>
+      <div class="container">
+        <h2>First Slide</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, ante eu sagittis venenatis, ex purus
+          iaculis tortor, eu luctus purus ex ac turpis. Mauris euismod vitae sapien ut bibendum.</p>
+      </div>
+    </div>
+    <div class="item" style="background-image: url('https://via.placeholder.com/1920x1080');">
+      <div class="overlay"></div>
+      <div class="container">
+        <h2>Second Slide</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, ante eu sagittis venenatis, ex purus
+          iaculis tortor, eu luctus purus ex ac turpis. Mauris euismod vitae sapien ut bibendum.</p>
+      </div>
+    </div>
+    <div class="item" style="background-image: url('https://via.placeholder.com/1920x1080');">
+      <div class="overlay"></div>
+      <div class="container">
+        <h2>Third Slide</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, ante eu sagittis venenatis, ex purus
+          iaculis tortor, eu luctus purus ex ac turpis. Mauris euismod vitae sapien ut bibendum.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+</body>
+
+</html>

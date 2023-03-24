@@ -105,3 +105,35 @@ header {
 .text-left {
   text-align: left;
 }
+
+
+
+
+/* Service Section Caerd Design Start */
+.row.promo-content {
+  background: #ffffff none repeat scroll 0 0;
+  -webkit-box-shadow: 0 9px 9px 0 #c7c7c7;
+  box-shadow: 0 9px 9px 0 #c7c7c7;
+  margin-top: -100px;
+  padding-top: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.text-icon-box {
+  position: relative;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.box-title {
+  color: green;
+  margin-top: 2%;
+  text-align: left;
+}
+
+.box-text {
+  text-align: justify;
+}

@@ -1,181 +1,284 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="zxx">
+<!--<![endif]-->
+
 
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sticky Header and Owl Carousel Example</title>
-  <!-- CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./assest/css/custom.css">
-  <link rel="stylesheet" href="./assest/css/course.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="APPTON HTML5 Template is a simple Smooth Personal App Landing Template" />
+  <meta name="keywords" content="App, Landing, Business, Onepage, Html, Business" />
 
+  <title>Project-06</title>
 
-  <!-- JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" type="image/ico" href="assest/img/favicon.png" />
 
-  <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> -->
+  <link href="assest/css/plugins.css" rel="stylesheet">
+  <link href="assest/css/theme.css" rel="stylesheet">
+  <link href="assest/css/icons.css" rel="stylesheet">
 
-
+  <link href="assest/css/style.css" rel="stylesheet">
+  <link href="assest/css/responsive.css" rel="stylesheet">
+  <script src="assest/js/vendor/modernizr-2.8.3.min.js"></script>
+  <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+  <script nonce="8ab93fe4-d014-4665-bb1c-932f294f9fb2">
+    (function (w, d) {
+      ! function (bv, bw, bx, by) {
+        bv[bx] = bv[bx] || {};
+        bv[bx].executed = [];
+        bv.zaraz = {
+          deferred: [],
+          listeners: []
+        };
+        bv.zaraz.q = [];
+        bv.zaraz._f = function (bz) {
+          return function () {
+            var bA = Array.prototype.slice.call(arguments);
+            bv.zaraz.q.push({
+              m: bz,
+              a: bA
+            })
+          }
+        };
+        for (const bB of ["track", "set", "debug"]) bv.zaraz[bB] = bv.zaraz._f(bB);
+        bv.zaraz.init = () => {
+          var bC = bw.getElementsByTagName(by)[0],
+            bD = bw.createElement(by),
+            bE = bw.getElementsByTagName("title")[0];
+          bE && (bv[bx].t = bw.getElementsByTagName("title")[0].text);
+          bv[bx].x = Math.random();
+          bv[bx].w = bv.screen.width;
+          bv[bx].h = bv.screen.height;
+          bv[bx].j = bv.innerHeight;
+          bv[bx].e = bv.innerWidth;
+          bv[bx].l = bv.location.href;
+          bv[bx].r = bw.referrer;
+          bv[bx].k = bv.screen.colorDepth;
+          bv[bx].n = bw.characterSet;
+          bv[bx].o = (new Date).getTimezoneOffset();
+          if (bv.dataLayer)
+            for (const bI of Object.entries(Object.entries(dataLayer).reduce(((bJ, bK) => ({
+                ...bJ[1],
+                ...bK[1]
+              }))))) zaraz.set(bI[0], bI[1], {
+              scope: "page"
+            });
+          bv[bx].q = [];
+          for (; bv.zaraz.q.length;) {
+            const bL = bv.zaraz.q.shift();
+            bv[bx].q.push(bL)
+          }
+          bD.defer = !0;
+          for (const bM of [localStorage, sessionStorage]) Object.keys(bM || {}).filter((bO => bO.startsWith(
+            "_zaraz_"))).forEach((bN => {
+            try {
+              bv[bx]["z_" + bN.slice(7)] = JSON.parse(bM.getItem(bN))
+            } catch {
+              bv[bx]["z_" + bN.slice(7)] = bM.getItem(bN)
+            }
+          }));
+          bD.referrerPolicy = "origin";
+          bD.src = "/cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON.stringify(bv[bx])));
+          bC.parentNode.insertBefore(bD, bC)
+        };
+        ["complete", "interactive"].includes(bw.readyState) ? zaraz.init() : bv.addEventListener("DOMContentLoaded",
+          zaraz.init)
+      }(w, d, "zarazData", "script");
+    })(window, document);
+  </script>
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".mainmenu-area" data-offset="90">
+  <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-  <div class="container">
-    <header>
-      <div class="logo">
-        <img src="./assest/img/logo.png.webp" alt="Logo">
-      </div>
-      <div class="navigation">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Courses</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </header>
+  <div class="preeloader">
+    <div class="preloader-spinner"></div>
   </div>
 
+  <a href="#scroolup" class="scrolltotop"><i class="fa fa-long-arrow-up"></i></a>
 
-  <!-- Header Carousel Start -->
-  <div id="carouselExampleIndicators" class="carousel" data-ride="carousel">
-    <!-- <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol> -->
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100"
-          src="https://images.unsplash.com/photo-1552872673-9b7b99711ebb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8MTkyMCUyMHglMjAxMDgwfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-          alt="First slide">
-        <div class="container carousel-caption">
-          <h1>Develop a passion for <br> learning new things</h1>
-          <p>Was certainty remaining engrossed applauded sir how discovery. Settled <br> opinion how enjoyed greater joy
-            adapted too shy.
-            Now properly surprise expenses.</p>
-          <button class="btn btn-success" style="width:25%">
-            Start Learning Now
-          </button>
+  <header class="top-area" id="home">
+    <div class="header-top-area" id="scroolup">
+
+      <div class="mainmenu-area" id="mainmenu-area">
+        <div class="mainmenu-area-bg"></div>
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-header">
+              <a href="#home" class="navbar-brand"><img src="./assest/img/logo.png.webp" alt="logo"></a>
+            </div>
+            <div id="main-nav" class="stellarnav">
+              <ul id="nav" class="nav navbar-nav pull-right">
+                <li class="active"><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#testmonial">Testmonial</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="./Service.html">Service</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+    </div>
+
+    <div class="welcome-slider-area white font16">
+      <div class="welcome-single-slide">
+        <div class="slide-bg-one slide-bg-overlay"></div>
+        <div class="welcome-area">
+          <div class="container">
+            <div class="row flex-v-center">
+              <div class="col-md-8 col-lg-7 col-sm-12 col-xs-12">
+                <div class="welcome-text">
+                  <h1>Develop a passion for learning new things.</h1>
+                  <p>Was certainty remaining engrossed applauded sir how discovery. Settled opinion how enjoyed greater
+                    joy adapted too shy. Now properly surprise expenses.</p>
+                  <div class="home-button">
+                    <form action="#">
+                      <input type="search" name="search" id="search" placeholder="Search Courses">
+                      <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <img class="d-block w-100"
-          src="https://c4.wallpaperflare.com/wallpaper/688/947/718/nature-full-hd-image-1920x1080-wallpaper-preview.jpg"
-          alt="Second slide">
-        <div class="container carousel-caption">
-          <h1>Develop a passion for <br> learning new things</h1>
-          <p>Was certainty remaining engrossed applauded sir how discovery. Settled <br> opinion how enjoyed greater joy
-            adapted too shy.
-            Now properly surprise expenses.</p>
-          <button class="btn btn-success" style="width:25%">
-            Enroll Our New Course
-          </button>
+      <div class="welcome-single-slide">
+        <div class="slide-bg-two slide-bg-overlay"></div>
+        <div class="welcome-area">
+          <div class="container">
+            <div class="row flex-v-center">
+              <div class="col-md-8 col-lg-7 col-sm-12 col-xs-12">
+                <div class="welcome-text">
+                  <h1>Develop a passion for learning new things.</h1>
+                  <p>Was certainty remaining engrossed applauded sir how discovery. Settled opinion how enjoyed greater
+                    joy adapted too shy. Now properly surprise expenses.</p>
+                  <div class="home-button">
+                    <form action="#">
+                      <input type="search" name="search" id="search" placeholder="Search Courses">
+                      <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <img class="d-block w-100"
-          src="https://images.unsplash.com/photo-1606228281437-dc226988dc3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8MTkyMCUyMHglMjAxMDgwfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-          alt="Third slide">
-        <div class="container carousel-caption">
-          <h1>Develop a passion for <br> learning new things</h1>
-          <p>Was certainty remaining engrossed applauded sir how discovery. Settled <br> opinion how enjoyed greater joy
-            adapted too shy.
-            Now properly surprise expenses.</p>
-          <button class="btn btn-success" style="width:25%">
-            See All Our Latest Course
-          </button>
+      <div class="welcome-single-slide">
+        <div class="slide-bg-three slide-bg-overlay"></div>
+        <div class="welcome-area">
+          <div class="container">
+            <div class="row flex-v-center">
+              <div class="col-md-8 col-lg-7 col-sm-12 col-xs-12">
+                <div class="welcome-text">
+                  <h1>Develop a passion for learning new things.</h1>
+                  <p>Was certainty remaining engrossed applauded sir how discovery. Settled opinion how enjoyed greater
+                    joy adapted too shy. Now properly surprise expenses.</p>
+                  <div class="home-button">
+                    <form action="#">
+                      <input type="search" name="search" id="search" placeholder="Search Courses">
+                      <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-  <!-- Header Carousel End -->
+  </header>
 
 
-  <!-- Service Card Section Start -->
-  <div class="container">
-    <div class="row promo-content">
-      <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-        <div class="text-icon-box mb20 xs-mb0 wow fadeInUp padding30" data-wow-delay="0.1s"
-          style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-          <div>
-            <img class="d-block w-100" src="./assest/img/blog/blog-1.jpg.webp" alt="1st image">
+  <section class="features-top-area" id="features">
+    <div class="container">
+      <div class="row promo-content">
+        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+          <div class="text-icon-box mb20 xs-mb0 wow fadeInUp padding30" data-wow-delay="0.1s"
+            style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+            <div>
+              <img class="d-block w-100" src="./assest/img/blog/blog-1.jpg.webp" alt="1st image">
+            </div>
+            <h5 class="box-title">Become Strategic</h5>
+            <p class="box-text">
+              Our training program help you boost your competency and therefore your self-confidence in project controls
+              and project management.
+              The more competent you are, the more opportunities you will have to advance your career. Start now with
+              our
+              complimentary training.
+            </p>
+            <br>
+            <p>Read More..</p>
           </div>
-          <h5 class="box-title">Become Strategic</h5>
-          <p class="box-text">
-            Our training program help you boost your competency and therefore your self-confidence in project controls
-            and project management.
-            The more competent you are, the more opportunities you will have to advance your career. Start now with our
-            complimentary training.
-          </p>
-          <br>
-          <p>Read More..</p>
         </div>
-      </div>
-      <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-        <div class="text-icon-box mb20 xs-mb0 wow fadeInUp padding30" data-wow-delay="0.1s"
-          style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-          <div>
-            <img class="d-block w-100" src="./assest/img/blog/blog-2.jpg.webp" alt="1st image">
+        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+          <div class="text-icon-box mb20 xs-mb0 wow fadeInUp padding30" data-wow-delay="0.1s"
+            style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+            <div>
+              <img class="d-block w-100" src="./assest/img/blog/blog-2.jpg.webp" alt="1st image">
+            </div>
+            <h5 class="box-title">Enhance Your Career</h5>
+            <p class="box-text">
+              Our training program help you boost your competency and therefore your self-confidence in project controls
+              and project management.
+              The more competent you are, the more opportunities you will have to advance your career. Start now with
+              our
+              complimentary training.
+            </p>
+            <br>
+            <p>Read More..</p>
           </div>
-          <h5 class="box-title">Enhance Your Career</h5>
-          <p class="box-text">
-            Our training program help you boost your competency and therefore your self-confidence in project controls
-            and project management.
-            The more competent you are, the more opportunities you will have to advance your career. Start now with our
-            complimentary training.
-          </p>
-          <br>
-          <p>Read More..</p>
         </div>
-      </div>
-      <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-        <div class="text-icon-box mb20 xs-mb0 wow fadeInUp padding30" data-wow-delay="0.1s"
-          style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-          <div>
-            <img class="d-block w-100" src="./assest/img/blog/blog-3.jpg.webp" alt="1st image">
+        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+          <div class="text-icon-box mb20 xs-mb0 wow fadeInUp padding30" data-wow-delay="0.1s"
+            style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+            <div>
+              <img class="d-block w-100" src="./assest/img/blog/blog-3.jpg.webp" alt="1st image">
+            </div>
+            <h5 class="box-title">Build Your Team Expertise</h5>
+            <p class="box-text">
+              Our training program help you boost your competency and therefore your self-confidence in project controls
+              and project management.
+              The more competent you are, the more opportunities you will have to advance your career. Start now with
+              our
+              complimentary training.
+            </p>
+            <br>
+            <p>Read More..</p>
           </div>
-          <h5 class="box-title">Build Your Team Expertise</h5>
-          <p class="box-text">
-            Our training program help you boost your competency and therefore your self-confidence in project controls
-            and project management.
-            The more competent you are, the more opportunities you will have to advance your career. Start now with our
-            complimentary training.
-          </p>
-          <br>
-          <p>Read More..</p>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Service Card Section End -->
+  </section>
 
 
   <!-- Why Choose Project P6 Start -->
   <div class="project-p6">
     <div class="container">
       <div class="row mb-4">
-        <div class="col-md-12">
-          <h4 class="section-header">Why Choose Project P6?</h4>
+        <div class="col-md-12 mb-2">
+          <h2 class="xs-font26" style="text-align: center;">Why Project P6?</h2>
         </div>
       </div>
 
-      <div class="row">
+      <div class="row contact-margin">
         <div class="col-md-4">
           <h5 class="box-title">National Leader</h5>
           <p class="box-text">
@@ -234,8 +337,7 @@
   </div>
   <!-- Why Choose Project P6 Start -->
 
-
-  <!-- Our Trending Course Start -->
+  <!-- Tranding Courses Start -->
   <section class="course-area padding-top" id="courses">
     <div class="container-fluid">
       <div class="row">
@@ -248,7 +350,7 @@
       <div class="row course-list">
         <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
           <div class="single-course mb20">
-            <img src="assest/img/course/blog-1.jpg" alt="">
+            <img src="./assest/img/course/blog-1.jpg.webp" alt="">
             <div class="course-details padding30">
               <h3 class="font18">How to Write a Powerful Speech</h3>
               <p>MPs who are leaving the protection of for the campaign trail will render...</p>
@@ -259,7 +361,7 @@
         </div>
         <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
           <div class="single-course mb20">
-            <img src="assest/img/course/blog-2.jpg" alt="">
+            <img src="./assest/img/course/blog-2.jpg.webp" alt="">
             <div class="course-details padding30">
               <h3 class="font18">The Art and Practice of Leadership</h3>
               <p>MPs who are leaving the protection of for the campaign trail will render...</p>
@@ -270,7 +372,7 @@
         </div>
         <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
           <div class="single-course mb20">
-            <img src="assest/img/course/blog-3.jpg" alt="">
+            <img src="./assest/img/course/blog-3.jpg.webp" alt="">
             <div class="course-details padding30">
               <h3 class="font18">Introduction to Resume Writing</h3>
               <p>MPs who are leaving the protection of for the campaign trail will render...</p>
@@ -281,7 +383,7 @@
         </div>
         <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
           <div class="single-course mb20">
-            <img src="assest/img/course/blog-4.jpg" alt="">
+            <img src="./assest/img/course/blog-4.jpg.webp" alt="">
             <div class="course-details padding30">
               <h3 class="font18">The Art and Practice of Leadership</h3>
               <p>MPs who are leaving the protection of for the campaign trail will render...</p>
@@ -293,42 +395,357 @@
       </div>
     </div>
   </section>
-  <!-- Our Trending Course End -->
+  <!-- Tranding Courses End -->
 
 
+  <!-- What Our Customer Says Start -->
+  <section class="testmonial-area bg-theme section-padding" id="testmonial">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
+          <div class="area-title text-center wow fadeIn">
+            <h2>What Our Customer Say</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="testmonial-slider">
+            <div class="single-testmonial">
+              <div class="author-content mb20">
+                <p>“The recording starts with the patter of a summer squall. Later a drifting tone like that of a
+                  not-quite-tuned-in radio station rises and for a while drowns out the patter. These are the sounds
+                  encountered by NASA.”</p>
+              </div>
+              <div class="author-name-image relative">
+                <div class="author-img mb20">
+                  <img src="./assest/img/testmonial/testmonial.jpg.webp" alt="">
+                </div>
+                <h4>Harold Crouse</h4>
+                <a href="#">Sales manager</a>
+              </div>
+            </div>
+            <div class="single-testmonial">
+              <div class="author-content mb20">
+                <p>“The recording starts with the patter of a summer squall. Later a drifting tone like that of a
+                  not-quite-tuned-in radio station rises and for a while drowns out the patter. These are the sounds
+                  encountered by NASA.”</p>
+              </div>
+              <div class="author-name-image relative">
+                <div class="author-img mb20">
+                  <img src="./assest/img/testmonial/testmonial.jpg.webp" alt="">
+                </div>
+                <h4>Harold Crouse</h4>
+                <a href="#">Sales manager</a>
+              </div>
+            </div>
+            <div class="single-testmonial">
+              <div class="author-content mb20">
+                <p>“The recording starts with the patter of a summer squall. Later a drifting tone like that of a
+                  not-quite-tuned-in radio station rises and for a while drowns out the patter. These are the sounds
+                  encountered by NASA.”</p>
+              </div>
+              <div class="author-name-image relative">
+                <div class="author-img mb20">
+                  <img src="./assest/img/testmonial/testmonial.jpg.webp" alt="">
+                </div>
+                <h4>Harold Crouse</h4>
+                <a href="#">Sales manager</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- What Our Customer Says End -->
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+
+  <!-- Free Training & Master Class Start -->
+  <section class="course-area padding-top" id="courses">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
+          <div class="area-title text-center wow fadeIn">
+            <h2 class="xs-font26">Our Free Training and Masterclasses</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row course-list">
+        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+          <div class="single-course mb20">
+            <img src="./assest/img/course/blog-1.jpg.webp" alt="">
+            <div class="course-details padding30">
+              <h3 class="font18">How to Write a Powerful Speech</h3>
+              <p>MPs who are leaving the protection of for the campaign trail will render...</p>
+              <p class="mt30"><a href="#" class="enroll-button">Enroll the Courses</a> <span
+                  class="course-price">$29.99</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+          <div class="single-course mb20">
+            <img src="./assest/img/course/blog-2.jpg.webp" alt="">
+            <div class="course-details padding30">
+              <h3 class="font18">The Art and Practice of Leadership</h3>
+              <p>MPs who are leaving the protection of for the campaign trail will render...</p>
+              <p class="mt30"><a href="#" class="enroll-button">Enroll the Courses</a> <span
+                  class="course-price">$29.99</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+          <div class="single-course mb20">
+            <img src="./assest/img/course/blog-3.jpg.webp" alt="">
+            <div class="course-details padding30">
+              <h3 class="font18">Introduction to Resume Writing</h3>
+              <p>MPs who are leaving the protection of for the campaign trail will render...</p>
+              <p class="mt30"><a href="#" class="enroll-button">Enroll the Courses</a> <span
+                  class="course-price">$29.99</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+          <div class="single-course mb20">
+            <img src="./assest/img/course/blog-4.jpg.webp" alt="">
+            <div class="course-details padding30">
+              <h3 class="font18">The Art and Practice of Leadership</h3>
+              <p>MPs who are leaving the protection of for the campaign trail will render...</p>
+              <p class="mt30"><a href="#" class="enroll-button">Enroll the Courses</a> <span
+                  class="course-price">$29.99</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Free Training & Master Class End -->
+
+
+  <!-- Blog Start -->
+  <section class="blog-feed-area padding-top margin-bottom" id="blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
+          <div class="area-title text-center wow fadeIn">
+            <h2>From Our Blog</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+          <div class="single-blog-item sm-mb30 xs-mb30 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="blog-thumb">
+              <a href="blog.html"><img src="./assest/img/blog/blog-1.jpg.webp" alt=""></a>
+            </div>
+            <div class="blog-details padding30">
+              <h3 class="blog-title font20 mb30"><a href="blog.html">Blazeon Scrambles to Police Content Amid Rapid
+                  Growth</a></h3>
+              <p class="blog-meta font14 mt20"><a href="#">Feb 01, 2016 </a> by <a href="#">Mark Stonis</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+          <div class="single-blog-item sm-mb30 xs-mb30 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="blog-thumb">
+              <a href="blog.html"><img src="./assest/img/blog/blog-2.jpg.webp" alt=""></a>
+            </div>
+            <div class="blog-details padding30">
+              <h3 class="blog-title font20 mb30"><a href="blog.html">Blazeon Scrambles to Police Content Amid Rapid
+                  Growth</a></h3>
+              <p class="blog-meta font14 mt20"><a href="#">Feb 01, 2016 </a> by <a href="#">Mark Stonis</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+          <div class="single-blog-item sm-mb30 xs-mb30 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="blog-thumb">
+              <a href="blog.html"><img src="./assest/img/blog/blog-3.jpg.webp" alt=""></a>
+            </div>
+            <div class="blog-details padding30">
+              <h3 class="blog-title font20 mb30"><a href="blog.html">Blazeon Scrambles to Police Content Amid Rapid
+                  Growth</a></h3>
+              <p class="blog-meta font14 mt20"><a href="#">Feb 01, 2016 </a> by <a href="#">Mark Stonis</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+          <div class="single-blog-item wow fadeInUp visible-sm" data-wow-delay="0.4s">
+            <div class="blog-thumb">
+              <a href="blog.html"><img src="./assest/img/blog/blog-1.jpg.webp" alt=""></a>
+            </div>
+            <div class="blog-details padding30">
+              <h3 class="blog-title font20 mb30"><a href="blog.html">Blazeon Scrambles to Police Content Amid Rapid
+                  Growth</a></h3>
+              <p class="blog-meta font14 mt20"><a href="#">Feb 01, 2016 </a> by <a href="#">Mark Stonis</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Blog End -->
+
+
+  <footer class="footer-area relative footer-bg">
+    <div class="footer-top-area padding-80-80">
+      <div class="row footer-marginLR">
+
+        <div class="col-md-2">
+          <img src="./assest/img/logo.png.webp" alt="Logo Image">
+          <br>
+          <br>
+          <span>
+            A small river named Duden ws by their place and supplies it with the necessaery regelialia
+          </span>
+
+          <br>
+          <br>
+          <img src="./assest/img/icon/fb.png" class="footer-icon" alt="fb">
+          <img src="./assest/img/icon/fb.png" class="footer-icon" alt="fb">
+          <img src="./assest/img/icon/fb.png" class="footer-icon" alt="fb">
+        </div>
+
+        <div class="col-md-2">
+          <h5 class="mb-5">Quick Links</h5>
+          <ul class="footer-ul">
+            <li> <span class="quck-links"> ></span> Web Design</li>
+            <li> <span class="quck-links"> ></span> Web Development</li>
+            <li> <span class="quck-links"> ></span> Graphic Design</li>
+            <li> <span class="quck-links"> ></span> UI/UX Design</li>
+
+          </ul>
+        </div>
+
+        <div class="col-md-2">
+          <h5 class="mb-5">Contact Us</h5>
+          <div class="row">
+            <div class="col-md-2">
+              <img src="./assest/img/icon/location.png" alt="">
+            </div>
+            <div class="col-md-10">
+              203 Fake St. Mountain View, San Francisco, California, USA
+            </div>
+          </div>
+
+          <div class="row contact-margin">
+            <div class="col-md-2">
+              <img src="./assest/img/icon/location.png" alt="">
+            </div>
+            <div class="col-md-10">
+              +2 392 3929 210
+            </div>
+          </div>
+
+          <div class="row contact-margin">
+            <div class="col-md-2">
+              <img src="./assest/img/icon/location.png" alt="">
+            </div>
+            <div class="col-md-10">
+              info@yourdomail.com
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Any question in mind? Send us email</h5>
+          <div class="row">
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Name" name="name">
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Email" name="email">
+            </div>
+            <br>
+            <br>
+            <div class="col-md-12">
+              <input type="text" class="form-control" placeholder="Subject" name="subject">
+            </div>
+            <br>
+            <br>
+            <div class="col-md-12">
+              <textarea cols="10" rows="5" placeholder="Your Message Here." name="message"
+                class="form-control"></textarea>
+            </div>
+
+            <div class="col-md-12">
+              <br>
+              <input type="submit" value="Send Message" class="btn btn-success" style="border-radius: 28px;">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Subscribe to our newsletter</h5>
+          <p>
+            Subscribe to our newsletter to receive exclusive offers, latest news and updates.
+          </p>
+          <br>
+          <form id="mc-form" class="subscriber-form">
+            <label class="mt10" for="mc-email"></label>
+            <input type="email" id="mc-email" placeholder="email@example.com">
+            <button type="submit" class="plus-btn"><i class="fa fa-paper-plane-o"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom-area white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+            <div class="footer-copyright text-center wow fadeIn">
+              <p>
+                Copyright &copy;<script>
+                  document.write(new Date().getFullYear());
+                </script> | All rights reserved 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="assest/js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="assest/js/vendor/bootstrap.min.js"></script>
+
+  <script src="assest/js/vendor/jquery.easing.1.3.js"></script>
+  <script src="assest/js/vendor/jquery-migrate-1.2.1.min.js"></script>
+  <script src="assest/js/vendor/jquery.appear.js"></script>
+  <script src="assest/js/owl.carousel.min.js"></script>
+  <script src="assest/js/stellar.js"></script>
+  <script src="assest/js/waypoints.min.js"></script>
+  <script src="assest/js/jquery.counterup.min.js"></script>
+  <script src="assest/js/wow.min.js"></script>
+  <script src="assest/js/jquery-modal-video.min.js"></script>
+  <script src="assest/js/stellarnav.min.js"></script>
+  <script src="assest/js/placeholdem.min.js"></script>
+  <script src="assest/js/contact-form.js"></script>
+  <script src="assest/js/jquery.ajaxchimp.js"></script>
+  <script src="assest/js/jquery.sticky.js"></script>
+
+  <script src="assest/js/main.js"></script>
+
+  <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTS_KEDfHXYBslFTI_qPJIybDP3eceE-A&sensor=false"></script>
+  <script src="assest/js/maps.active.js"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23581568-13');
+  </script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993"
+    integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
+    data-cf-beacon='{"rayId":"7ab7a0406d04a3cf","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2023.2.0","si":100}'
+    crossorigin="anonymous"></script>
 </body>
-
-<script>
-  // $(document).ready(function () {
-  //   $('.carousel').carousel({
-  //     interval: 200000
-  //   })
-  // });
-
-  // const slides = document.querySelector('.slides');
-  // const cards = document.querySelectorAll('.card');
-  // const slideWidth = cards[0].offsetWidth;
-  // let slideIndex = 0;
-
-  // function slide() {
-  //   slideIndex++;
-  //   if (slideIndex >= cards.length) {
-  //     slideIndex = 0;
-  //   }
-  //   slides.style.transform = `translateX(${-slideIndex * slideWidth}px)`;
-  // }
-
-  // setInterval(slide, 3000);
-
-  $(".slider").owlCarousel({
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 2000, //2000ms = 2s;
-    autoplayHoverPause: true,
-  });
-</script>
 
 </html>

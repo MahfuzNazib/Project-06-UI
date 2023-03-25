@@ -573,3 +573,20 @@ label.mt10.valid {
 .contact-margin{
     margin-top: 7%;
 }
+
+
+.service-card-image{
+    height: 225px;
+    width: 275px;
+    float: right;
+}
+
+.service-card-tag{
+    color: #0be27a;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.service-card-text{
+    text-align: justify;
+}

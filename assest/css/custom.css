@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300&family=Josefin+Sans:wght@100;300;400&family=Kanit&family=Titillium+Web:wght@200&display=swap');
+/* Common Style Start */
+.section-header{
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 900;
+}
+/* Common Style End */
+
+
+
 .sticky-header {
   position: sticky;
     top: 0;
@@ -107,6 +118,13 @@ header {
 }
 
 
+/* Chosse Project P6 Start*/
+.project-p6{
+  background-color: #f8f8f8;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+/* Chosse Project P6 End*/
 
 
 /* Service Section Caerd Design Start */
@@ -137,3 +155,6 @@ header {
 .box-text {
   text-align: justify;
 }
+/* Service Section Card Design End */
+
+
